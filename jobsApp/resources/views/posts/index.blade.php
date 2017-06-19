@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Hey</title>
+</head>
+
+<body>
+	Hello world
+</body>
+
+
+</html>
