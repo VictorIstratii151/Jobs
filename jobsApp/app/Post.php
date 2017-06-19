@@ -2,9 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Post extends Model
+class Post extends Model // This model extends the general Eloquent Model from the same namespace
 {
     //
 }
