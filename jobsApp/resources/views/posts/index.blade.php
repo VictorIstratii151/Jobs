@@ -17,7 +17,6 @@
 	</div>
 
 
-
 	{{ $posts->links() }}
 
 @endsection

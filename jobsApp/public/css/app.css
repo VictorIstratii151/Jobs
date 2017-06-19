@@ -9,3 +9,8 @@
 body {
   padding-top: 2rem;
 }
+
+#writing_post {
+  width: 50%;
+  margin: 0 auto;
+}
