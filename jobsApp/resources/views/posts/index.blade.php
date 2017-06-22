@@ -10,7 +10,7 @@
 
 				<p> {{ $post->body }} </p>
 
-				<p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+				<p><a class="btn btn-primary" href="/posts/{{ $post->id }}" role="button">View details &raquo;</a></p>
 			</div>
 
 		@endforeach

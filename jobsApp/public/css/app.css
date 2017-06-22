@@ -10,7 +10,9 @@ body {
   padding-top: 2rem;
 }
 
-#writing_post {
-  width: 50%;
-  margin: 0 auto;
+#sas{
+  height: 100px;
+	width: 100px;
+	border-radius: 5px;
+	background-color: #ABCDEF;
 }
