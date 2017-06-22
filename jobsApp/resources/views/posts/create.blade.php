@@ -1,12 +1,76 @@
-{{-- @extends ('layouts.master')
+@extends ('layouts.master')
 
-@section ('content') --}}
+@section ('content')
+
+	<script>
+		$(document).ready(function () {
+
+
+			$('#damn').on('click',function(e){
+
+		    console.log("blah");
+
+		    e.preventDefault(e);
+		    console.log($('#post_form').serializeArray());
+		  //   	$.ajax({
+				//   method: "POST",
+				//   url: "/posts",
+				//   data: { name: "John", location: "Boston" }
+				// })
+				//   .done(function( msg ) {
+				//     alert( "Data Saved: " + msg );
+				//   });
+
+		        $.ajax({
+
+		        type:"POST",
+		        method: "POST",
+		        url:'/posts',
+		        data:$('#post_form').serializeArray(),
+		        dataType: 'json',
+		        success: function(data){
+		        		alert(data['message']);
+			            console.log(data);
+			        },
+		        error: function(jqXHR, status, err){
+		        		console.log(status),
+       					console.log(err)
+       					console.log(jqXHR.responseText);
+			        }
+		    	});
+
+		    });
+		});
+
+		// $('#post_form').submit(function(e) {
+
+		//     e.preventDefault(); 
+
+		// 	var dataToPost = $(this).serialize();
+
+		// 	jQuery.post('/posts', dataToPost).done(function(response, status, jqxhr){ 
+	 //                // this is the "success" callback
+	 //            });
+		// });
+
+
+
+
+	</script>
 
 	<h3>Publish an Ad</h3>
 
-	<form method="POST" action="/posts">
+	{{-- <form id="post_form" action="/posts" method="POST"> --}}
+	<form id="post_form" action="/posts">
 
 	  {{ csrf_field() }}
+
+	  <div class="form-group">
+				
+		<label for="name">Company Name:</label>
+		<input type="text" class="form-control" id="name" name="name" required=>
+
+	  </div>
 
 	  <div class="form-group">
 				
@@ -40,7 +104,8 @@
 
 	  <div class="form-group">
 
-	  	<button type="submit" class="btn btn-primary">Publish</button>
+	  	<button type="submit" formaction="/posts" class="btn btn-primary">Publish</button>
+	  	<a id="damn" class="btn btn-primary" href="/#">Publish</a>
 
 	  </div>
 
@@ -51,4 +116,4 @@
 
 </div>
 
-{{-- @endsection --}}
+@endsection
