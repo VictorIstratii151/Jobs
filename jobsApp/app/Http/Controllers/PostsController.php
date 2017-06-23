@@ -46,8 +46,8 @@ class PostsController extends Controller
         return response()->json($responseData, 200, [], JSON_PRETTY_PRINT);
     }
 
-    public function show()
+    public function show(Post $post)
     {
-        return view('posts.show');
+        return view('posts.show', compact('post'));
     }
 }
