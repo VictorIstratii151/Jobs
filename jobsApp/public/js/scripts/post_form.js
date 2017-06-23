@@ -16,11 +16,14 @@ $(document).ready(function () {
 		        		alert(data['message']);
 			            console.log(data);
 			        },
-		        error: function(jqXHR, status, err){
-		        		console.log(status),
-       					console.log(err)
-       					console.log(jqXHR.responseText);
-			        }
+		        error: function(data)
+	            {
+	                var errors = '';
+	                for(datos in data.responseJSON){
+	                    errors += data.responseJSON[datos] + '<br>';
+	                }
+	                $('#response').show().html(errors); //this is my div with messages
+	            }
 		    	});
 
 		    });
