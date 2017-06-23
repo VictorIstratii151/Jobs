@@ -1,6 +1,14 @@
 @extends ('layouts.master')
 @section ('content')
 
+	
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+        <h2>Dashboard</h2>
+      </div>
+    </div>
+
 	<div class="row">
 		@foreach ($posts as $post)
 
