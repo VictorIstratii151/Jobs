@@ -25,13 +25,6 @@
 
     @include ('layouts.nav')
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <div class="container">
-        <h2>Hello World</h2>
-      </div>
-    </div>
-
     <div class="container">
       <!-- Example row of columns -->
 

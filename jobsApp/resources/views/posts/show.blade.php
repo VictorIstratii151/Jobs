@@ -18,8 +18,10 @@
 			</div>
 
 			<div class="info">
-				Telephone: {{ $post->company_phone_number }}
 				<hr>
+				
+				Telephone: {{ $post->company_phone_number }}
+			
 				Email: {{ $post->company_email }}
 			</div>
 
