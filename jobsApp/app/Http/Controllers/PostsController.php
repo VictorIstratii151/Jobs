@@ -26,7 +26,8 @@ class PostsController extends Controller
                                 'body' => 'required',
                                 'name' => 'required',
                                 'email' => 'required',
-                                'phone_number' => 'required']);
+                                'phone_number' => 'required',
+                                'programming_language' => 'required']);
 
         $data = $request->input();
 
@@ -34,13 +35,14 @@ class PostsController extends Controller
             'company_name' => $data['name'],
             'company_email' => $data['email'],
             'company_phone_number' => $data['phone_number'],
+            'programming_language' => $data['programming_language'],
             'title' => $data['title'],
             'body' => $data['body']
         ]);
 
         $responseData = [
             'success' => true,
-            'message' => 'Your AJAX processed correctly'
+            'message' => 'Post created successfully.'
         ];
 
         return response()->json($responseData, 200, [], JSON_PRETTY_PRINT);

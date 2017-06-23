@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('company_name');
             $table->string('company_email', 100);
             $table->string('company_phone_number');
+            $table->string('programming_language');
             $table->string('title');
             $table->text('body');
             $table->timestamps();

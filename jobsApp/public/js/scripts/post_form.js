@@ -14,7 +14,7 @@ $(document).ready(function () {
 		        dataType: 'json',
 		        success: function(data){
 		        		alert(data['message']);
-			            console.log(data);
+			            location.reload();
 			        },
 		        error: function(data)
 	            {

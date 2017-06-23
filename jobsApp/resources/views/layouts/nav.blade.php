@@ -1,4 +1,6 @@
 
+<script src="/js/scripts/search.js" type="text/javascript"></script>
+
 <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -18,13 +20,54 @@
               
             </div>
           </li>
+{{-- 
+          <li class="nav-item dropdown">
+            <dl class="dropdown"> 
+              
+                <dt>
+                <a href="#">
+                  <span class="hida">Select</span>    
+                  <p class="multiSel"></p>  
+                </a>
+                </dt>
+              
+                <dd>
+                    <div class="mutliSelect">
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="Name" />Company Name
+                            </li>
+
+                            <li>
+                                <input type="checkbox" value="Language" />Programming Language
+                            </li>
+
+                            <li>
+                                <input type="checkbox" value="Keyword" />Keyword
+                            </li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+          </li> --}}
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+
+              <ul>
+                <li>
+                    <input id="company_name" type="checkbox" value="Name" />Company Name
+                </li>
+
+                <li>
+                    <input id="programming_language" type="checkbox" value="Language" />Programming Language
+                </li>
+
+                <li>
+                    <input id="keyword" type="checkbox" value="Keyword" />Keyword
+                </li>
+            </ul>
             </div>
           </li>
 
@@ -32,7 +75,7 @@
 
         <form class="form-inline my-2 my-lg-3">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button id="search_button" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
         
       </div>
