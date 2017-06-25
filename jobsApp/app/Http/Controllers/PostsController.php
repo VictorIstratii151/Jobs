@@ -7,11 +7,36 @@ use \App\Post;
 
 class PostsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $data = $request->input();
+
     	$posts = Post::latest()->get();
     	$posts = Post::paginate(3);
     	return view('posts.index', compact('posts'));
+    }
+
+    public function search(Request $request)
+    {
+        $data = $request->input();
+
+        if ($count = count($data))
+        {
+            $matching = [];
+
+            foreach($data as $key => $value)
+            {
+                $matching[$key] = $value;
+            }
+
+            $posts = Post::where('programming_language', '=', 'PHP')->paginate(3);
+
+
+            return view('posts.index', compact('posts'));
+        }
+
+        
+        return redirect()->to('/');
     }
 
     public function create()
@@ -52,4 +77,6 @@ class PostsController extends Controller
     {
         return view('posts.show', compact('post'));
     }
+
+
 }
