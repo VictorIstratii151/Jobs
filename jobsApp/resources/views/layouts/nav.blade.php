@@ -20,36 +20,6 @@
               
             </div>
           </li>
-{{-- 
-          <li class="nav-item dropdown">
-            <dl class="dropdown"> 
-              
-                <dt>
-                <a href="#">
-                  <span class="hida">Select</span>    
-                  <p class="multiSel"></p>  
-                </a>
-                </dt>
-              
-                <dd>
-                    <div class="mutliSelect">
-                        <ul>
-                            <li>
-                                <input type="checkbox" value="Name" />Company Name
-                            </li>
-
-                            <li>
-                                <input type="checkbox" value="Language" />Programming Language
-                            </li>
-
-                            <li>
-                                <input type="checkbox" value="Keyword" />Keyword
-                            </li>
-                        </ul>
-                    </div>
-                </dd>
-            </dl>
-          </li> --}}
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -74,7 +44,8 @@
         </ul>
 
         <form class="form-inline my-2 my-lg-3">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <input id="input_area" class="form-control mr-sm-2" type="text" placeholder="Search">
+
           <button id="search_button" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
         

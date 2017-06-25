@@ -23,13 +23,16 @@
 
   <body>
 
+    <div id="index_div">
+
     @include ('layouts.nav')
 
-    <div class="container">
+    <div id="page_body" class="container">
       <!-- Example row of columns -->
 
-        @yield ('content')
-
+        
+          @yield ('content')
+        </div>
 
       <hr>
 

@@ -9,7 +9,7 @@
       </div>
     </div>
 
-	<div class="row">
+	<div id="dashboard" class="row">
 		@foreach ($posts as $post)
 
 			<div class="col-md-4">

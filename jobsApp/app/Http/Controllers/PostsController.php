@@ -24,12 +24,38 @@ class PostsController extends Controller
         {
             $matching = [];
 
+            $keyword;
+
             foreach($data as $key => $value)
             {
-                $matching[$key] = $value;
+                $keyword = $value;
             }
 
-            $posts = Post::where('programming_language', '=', 'PHP')->paginate(3);
+            $one;
+            $two;
+            $three;
+
+            if (array_key_exists('programming_language', $data))
+            {
+                $one = Post::where('programming_language', '=', $keyword);
+            }
+
+            if (array_key_exists('company_name', $data))
+            {
+                $two = Post::where('company_name', '=', $keyword);
+            }
+
+            if (array_key_exists('keyword', $data))
+            {
+                $three = Post::where('keyword', 'LIKE', $keyword);
+            }
+
+            //$posts = Post::where($one)->union($two)->union($three);
+            //$posts = Post::where()->orWhere($two)
+            $posts = Post::where('programming_language', '=', $keyword)
+                        ->orWhere('company_name', '=', $keyword)
+                        ->orWhere('keyword', 'LIKE', $keyword)
+                        ->paginate(3);
 
 
             return view('posts.index', compact('posts'));
